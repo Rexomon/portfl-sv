@@ -45,7 +45,6 @@
 
     .intro {
         padding: 10px; 
-        margin: 10px;
     }
 
     
@@ -81,10 +80,10 @@
         padding: 10px;
     }
 
-    .introduction, .skills {
+    .introduction p, .skills {
         padding: 10px; 
-        margin-right: auto; 
-        max-width: 90%; 
+        margin-right: 100px; 
+        max-width: 60%; 
     }
 
     .card {
