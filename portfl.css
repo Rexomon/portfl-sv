@@ -80,9 +80,9 @@
         padding: 10px;
     }
 
-    .introduction p h4, .skills {
+    .introduction p, .introduction h4, .skills {
         padding: 10px; 
-        margin-right: 100px; 
+        margin-right: auto; 
         max-width: 60%; 
     }
 
