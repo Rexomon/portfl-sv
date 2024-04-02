@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfl.css">
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        const aboutMeLink = document.querySelector('.navbar .items li a[href="About"]');
+        
+        const aboutMeContainer = document.getElementById('about-me-container');
+        
+        const navItems = document.querySelectorAll('.navbar .items li a');
+        
+        // Menambahkan event listener untuk klik
+        aboutMeLink.addEventListener('click', function(event) {
+            // Mencegah halaman dari pengalihan
+            event.preventDefault();
+
+            // Mengubah konten container
+            aboutMeContainer.innerHTML = `
+                <div class="about-me-section">
+                    <h1>About Me</h1>
+                    </div>
+                    <div class="content-section">
+                    <div class="introduction">
+                        <h4>Info About Me</h4>
+                        <p>I am currently pursuing a degree in Computer Science. My passion lies in software development, specifically in backend development and game development. I have a solid foundation in programming languages such as C++, JavaScript, Node.js, and a basic understanding of PHP.</p>
+                    </div>
+                    <hr class="custom-hr">
+                    <div class="skills">
+                        <h4>Skills</h4>
+                        <div class="card">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg">
+                            
+                        <div class="skill-bar">
+                            <p>JavaScript</p>
+                        </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg">
+                        <div class="skill-bar">
+                            <p>C++</p>
+                        </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg">
+                        <div class="skill-bar">
+                            <p>Node.js</p>
+                        </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg">
+                        <div class="skill-bar">
+                            <p>PHP</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Menghapus class active dari semua elemen li
+            navItems.forEach(function(item) {
+                item.classList.remove('active');
+            });
+
+            const aboutMeItem = document.querySelector('.navbar .items li a[href="About"]');
+            aboutMeItem.classList.add('active');
+        
+            setTimeout(() => {
+            
+                document.querySelector('.about-me-section').classList.add('show');
+                document.querySelector('.introduction').classList.add('show');
+                document.querySelector('.skills').classList.add('show');
+                document.querySelector('.custom-hr').classList.add('show');
+            }, 100);
+        
+        });
+    });
+    window.onload = function() {
+        document.querySelector('.intro').classList.add('show');
+    };
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+            <ul class="items">
+                <li class="itemlines"><a href="About">About Me</a></li>
+                
+                <li class="itemlines"><a href="portfl.html" class="active">Home</a></li>
+            </ul>
+    </nav>
+
+    <div class="container" id="about-me-container">
+        <div class="intro">
+            <h1>Hi, I'm Muhammad Indriyo</h1>
+            <p>a first year student majoring in Computer Science. I'm passionate about programming and have an interest in becoming a Back End Developer and Game Developer.</p>
+        </div>
+    </div>
+</body>
+</html>
