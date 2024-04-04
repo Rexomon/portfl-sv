@@ -263,7 +263,7 @@ body {
     align-items: center;
     margin-right: 10px;
     display: flex;
-    max-width: 100px;
+    max-width: 120px;
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
