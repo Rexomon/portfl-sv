@@ -93,6 +93,10 @@
         margin-bottom: 20px;
     }
 
+    .skills-cards{
+        margin-right: 80px;
+        
+    }
     .card img {
         width: 100%;
         height: auto;
