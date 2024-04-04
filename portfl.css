@@ -92,8 +92,8 @@
     }
 
     .skills-cards{
-        margin-right: 80px;
-        max-width: auto;
+        margin-right: 10px 0;
+        max-width: min-content;
     }
     .card img {
         width: 100%;
